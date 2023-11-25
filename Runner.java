@@ -1,3 +1,4 @@
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -47,7 +48,7 @@ public class Runner{
 		String input = "";
 		System.out.println("Enter an actor: ");
 		try {
-			input = br.readLine();
+			input = BoundedLineReader.readLine(br, 5_000_000);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -62,7 +63,7 @@ public class Runner{
 		System.out.println("Would you like to see the whole graph?");
 		
 			try {
-				input = br.readLine();
+				input = BoundedLineReader.readLine(br, 5_000_000);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
