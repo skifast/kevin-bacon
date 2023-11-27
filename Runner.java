@@ -67,7 +67,7 @@ public class Runner{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			if(input.equals("y")){
+			if("y".equals(input)){
 				display();
 			}
 			else{
